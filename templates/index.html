@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSS Feed Preview</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center-align text in the body */
+        }
+
+        .landing {
+            background-image: url('your-background-image.jpg'); /* Add your background image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+        }
+
+        .landing h1 {
+            font-size: 36px;
+        }
+
+        .landing p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .landing button {
+            background-color: #00FF00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .landing button:hover {
+            background-color: #009900;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <h1>Welcome to RSS Feed Preview</h1>
+        <p>Get a sneak peek at your favorite RSS feeds.</p>
+        <form action="/preview" method="POST">
+            <input type="url" id="feed_url" name="feed_url" placeholder="Enter RSS Feed URL" required>
+            <button type="submit">Preview Feed</button>
+        </form>
+    </div>
+</body>
+</html>

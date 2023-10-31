@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSS Feed Preview</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center; /* Center align text in the body */
+        }
+
+        h1, h2 {
+            color: #00FF00;
+            text-align: center; /* Center align text for h1 and h2 */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #444;
+            border: 1px solid #555;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+        }
+
+        a {
+            color: #00FF00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            color: #ccc;
+        }
+
+        img {
+            max-width: 100%;
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RSS Feed Preview</h1>
+    <h2>Preview of RSS Feed</h2>
+    <ul>
+        {% for entry in entries %}
+            <li>
+                <a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a>
+                <p>{{ entry.summary }}</p>
+                {% if entry.image_url %}
+                    <img src="{{ entry.image_url }}" alt="Entry Image">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
